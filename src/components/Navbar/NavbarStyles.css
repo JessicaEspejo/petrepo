@@ -1,0 +1,127 @@
+.logg {
+  width: 100px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #c0dbff;
+  padding: 20px 80px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+}
+
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#navbar li {
+  list-style: none;
+  padding: 0 10px;
+  position: relative;
+}
+
+#navbar li a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: rgb(4, 96, 146);
+  transition: 0.3s ease-in-out;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+  color: #009a6c;
+}
+
+#navbar li a:hover::after,
+#navbar li a.active::after {
+  content: "";
+  width: 30%;
+  height: 2px;
+  background: #009a6c;
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+}
+
+#mobile {
+  display: none;
+}
+
+#mobile i {
+  color: rgb(85, 159, 220);
+  align-items: center;
+}
+
+#btnIN {
+
+  padding: 0.5rem 0.8rem;
+  border-radius: 16px;
+  font-size: 22px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  color: #fff;
+  background: radial-gradient(circle at -3.1% -4.3%,
+      rgb(81, 235, 181) 0%,
+      rgb(179, 211, 226) 90%);
+      transition: 0.3s ease-in-out;
+      
+
+}
+
+#btnIN:hover {
+  background: radial-gradient(circle at -3.1% -4.3%,
+      rgb(255, 255, 255) 0%,
+      rgb(233, 242, 247) 90%)
+}
+
+@media screen and (max-width: 769px) {
+  #navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top:70px;
+    right: -300px;
+    width: 300px;
+    height: 100vh;
+    color: rgb(255, 249, 249);
+    background: #97b7e3;
+    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+    padding: 40px 0 0 10px;
+    transition: 0.3s ease-in-out;
+  }
+
+  #navbar.active{
+    right: 0px;
+  }
+
+  #navbar li {
+    margin-bottom: 25px;
+
+    
+  }
+  #btnIN {
+    padding: 1rem 4rem;
+    border-radius: 29px;
+    font-size: 32px;
+    letter-spacing: 2.5px;
+    font-weight: 600;
+
+    background: radial-gradient(circle at -3.1% -4.3%,
+        rgb(125, 195, 253) 0%,
+        rgb(179, 211, 226) 90%)
+  }
+  #mobile {
+    display: block;
+  }
+
+  #mobile i {
+    font-size: 34px;
+    cursor: pointer;
+  }
+}
